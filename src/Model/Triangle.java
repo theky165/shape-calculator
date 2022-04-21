@@ -5,6 +5,7 @@ public class Triangle implements Shape{
     private double edge2;
     private double edge3;
     private double height;
+    boolean checkDigit;
 
     @Override
     public void input() {

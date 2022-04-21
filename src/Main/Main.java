@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int choiceShape;
         boolean checkLoop = true;
         Rectangle rectangle = new Rectangle();
@@ -13,14 +13,13 @@ public class Main {
         Circle circle = new Circle();
 
         while (checkLoop) {
-            System.out.print("===== Bài tập hình học =====\n" +
-                    "1. Hình chữ nhật\n" +
-                    "2. Hình vuông\n" +
-                    "3. Hình tam giác\n" +
-                    "4. Hình tròn\n" +
-                    "5. Thoát chương trình\n" +
-                    "Lựa chọn của bạn: ");
-            choiceShape = s.nextInt();
+            menu();
+            choiceShape = scanner.nextInt();
+            while (choiceShape > 5 || choiceShape < 1) {
+                System.out.print("Nhập giá trị từ 1 - 5!\n" +
+                        "Lựa chọn của bạn: ");
+                choiceShape = scanner.nextInt();
+            }
             switch (choiceShape) {
                 case 1:
                     rectangle.input();
@@ -44,5 +43,15 @@ public class Main {
                     break;
             }
         }
+    }
+
+    public static void menu() {
+        System.out.print("===== Bài tập hình học =====\n" +
+                "1. Hình chữ nhật\n" +
+                "2. Hình vuông\n" +
+                "3. Hình tam giác\n" +
+                "4. Hình tròn\n" +
+                "5. Thoát chương trình\n" +
+                "Lựa chọn của bạn: ");
     }
 }

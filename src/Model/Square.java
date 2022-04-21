@@ -2,6 +2,7 @@ package ex1_shape;
 
 public class Square implements Shape{
     private double edge;
+    boolean checkDigit;
 
     @Override
     public void input() {
