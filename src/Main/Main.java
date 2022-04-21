@@ -1,4 +1,9 @@
-package ex1_shape;
+package Main;
+
+import Model.Circle;
+import Model.Rectangle;
+import Model.Square;
+import Model.Triangle;
 
 import java.util.Scanner;
 

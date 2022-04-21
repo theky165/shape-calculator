@@ -1,6 +1,4 @@
-package ex1_shape;
-
-import java.util.Scanner;
+package Model;
 
 public class Rectangle implements Shape{
     private double length;

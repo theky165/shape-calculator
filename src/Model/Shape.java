@@ -1,4 +1,4 @@
-package ex1_shape;
+package Model;
 
 import java.util.Scanner;
 

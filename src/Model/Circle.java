@@ -1,4 +1,4 @@
-package ex1_shape;
+package Model;
 
 public class Circle implements Shape{
     private double radius;
@@ -6,17 +6,8 @@ public class Circle implements Shape{
 
     @Override
     public void input() {
-        while(!checkDigit){
-            try{
-                System.out.print("Nhập bán kính: ");
-                radius = s.nextDouble();
-                checkDigit = true;
-            }
-            catch(Exception e){
-                System.out.println("Vui lòng nhập số!");
-                s.nextLine();
-            }
-        }
+        System.out.print("Nhập bán kính: ");
+        radius = s.nextDouble();
     }
 
     @Override

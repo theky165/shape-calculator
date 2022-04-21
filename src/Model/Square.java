@@ -1,4 +1,4 @@
-package ex1_shape;
+package Model;
 
 public class Square implements Shape{
     private double edge;
