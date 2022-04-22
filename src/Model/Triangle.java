@@ -5,18 +5,17 @@ public class Triangle implements Shape{
     private double edge2;
     private double edge3;
     private double height;
-    boolean checkDigit;
 
     @Override
     public void input() {
         System.out.print("Nhập chiều dài cạnh 1: ");
-        edge1 = s.nextDouble();
+        edge1 = validate.checkDouble();
         System.out.print("Nhập chiều dài cạnh 2: ");
-        edge2 = s.nextDouble();
+        edge2 = validate.checkDouble();
         System.out.print("Nhập chiều dài cạnh 3: ");
-        edge3 = s.nextDouble();
+        edge3 = validate.checkDouble();
         System.out.print("Nhập chiều cao: ");
-        height = s.nextDouble();
+        height = validate.checkDouble();
     }
 
     @Override

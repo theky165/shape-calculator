@@ -7,9 +7,9 @@ public class Rectangle implements Shape{
     @Override
     public void input() {
         System.out.print("Nhập chiều dài: ");
-        length = s.nextDouble();
+        length = validate.checkDouble();
         System.out.print("Nhập chiều rộng: ");
-        width = s.nextDouble();
+        width = validate.checkDouble();
     }
 
     @Override

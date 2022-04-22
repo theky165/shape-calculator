@@ -4,12 +4,11 @@ import Model.Circle;
 import Model.Rectangle;
 import Model.Square;
 import Model.Triangle;
-
-import java.util.Scanner;
+import Validate.Validate;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Validate validate = new Validate();
         int choiceShape;
         boolean checkLoop = true;
         Rectangle rectangle = new Rectangle();
@@ -19,31 +18,30 @@ public class Main {
 
         while (checkLoop) {
             menu();
-            choiceShape = scanner.nextInt();
-            while (choiceShape > 5 || choiceShape < 1) {
-                System.out.print("Nhập giá trị từ 1 - 5!\n" +
-                        "Lựa chọn của bạn: ");
-                choiceShape = scanner.nextInt();
-            }
+            choiceShape = validate.checkRoundInt(1, 5);
             switch (choiceShape) {
                 case 1:
+                    System.out.println("===== Hình chữ nhật =====");
                     rectangle.input();
                     rectangle.output();
                     break;
                 case 2:
+                    System.out.println("===== Hình vuông =====");
                     square.input();
                     square.output();
                     break;
                 case 3:
+                    System.out.println("===== Hình tam giác =====");
                     triangle.input();
                     triangle.output();
                     break;
                 case 4:
+                    System.out.println("===== Hình tròn =====");
                     circle.input();
                     circle.output();
                     break;
                 default:
-                    System.out.println("Kết thúc chương trình!");
+                    System.out.println("===== Kết thúc chương trình =====");
                     checkLoop = false;
                     break;
             }

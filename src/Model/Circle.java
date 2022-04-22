@@ -2,12 +2,11 @@ package Model;
 
 public class Circle implements Shape{
     private double radius;
-    boolean checkDigit;
 
     @Override
     public void input() {
         System.out.print("Nhập bán kính: ");
-        radius = s.nextDouble();
+        radius = validate.checkDouble();
     }
 
     @Override

@@ -2,12 +2,11 @@ package Model;
 
 public class Square implements Shape{
     private double edge;
-    boolean checkDigit;
 
     @Override
     public void input() {
         System.out.print("Nhập cạnh của hình vuông: ");
-        edge = s.nextDouble();
+        edge = validate.checkDouble();
     }
 
     @Override

@@ -1,9 +1,9 @@
 package Model;
 
-import java.util.Scanner;
+import Validate.Validate;
 
 public interface Shape {
-    Scanner s = new Scanner(System.in);
+    Validate validate = new Validate();
     void input();
     void output();
 }
